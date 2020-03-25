@@ -14,6 +14,10 @@
 		F6FC8C46242A80F900B48FB6 /* Congress_Tracker_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6FC8C44242A80F900B48FB6 /* Congress_Tracker_iOS.xcdatamodeld */; };
 		F6FC8C48242A80FA00B48FB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6FC8C47242A80FA00B48FB6 /* Assets.xcassets */; };
 		F6FC8C4B242A80FA00B48FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6FC8C49242A80FA00B48FB6 /* LaunchScreen.storyboard */; };
+		F6FC8C55242A857400B48FB6 /* CongressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FC8C54242A857400B48FB6 /* CongressView.swift */; };
+		F6FC8C57242A899D00B48FB6 /* CongressMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FC8C56242A899D00B48FB6 /* CongressMember.swift */; };
+		F6FC8C59242BDF5700B48FB6 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FC8C58242BDF5700B48FB6 /* MemberCell.swift */; };
+		F6FC8C5B242BE54B00B48FB6 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FC8C5A242BE54B00B48FB6 /* ApiCall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		F6FC8C47242A80FA00B48FB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6FC8C4A242A80FA00B48FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6FC8C4C242A80FA00B48FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6FC8C54242A857400B48FB6 /* CongressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongressView.swift; sourceTree = "<group>"; };
+		F6FC8C56242A899D00B48FB6 /* CongressMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongressMember.swift; sourceTree = "<group>"; };
+		F6FC8C58242BDF5700B48FB6 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
+		F6FC8C5A242BE54B00B48FB6 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 				F6FC8C49242A80FA00B48FB6 /* LaunchScreen.storyboard */,
 				F6FC8C4C242A80FA00B48FB6 /* Info.plist */,
 				F6FC8C44242A80F900B48FB6 /* Congress_Tracker_iOS.xcdatamodeld */,
+				F6FC8C54242A857400B48FB6 /* CongressView.swift */,
+				F6FC8C56242A899D00B48FB6 /* CongressMember.swift */,
+				F6FC8C58242BDF5700B48FB6 /* MemberCell.swift */,
+				F6FC8C5A242BE54B00B48FB6 /* ApiCall.swift */,
 			);
 			path = "Congress Tracker iOS";
 			sourceTree = "<group>";
@@ -144,6 +156,10 @@
 				F6FC8C40242A80F900B48FB6 /* ViewController.swift in Sources */,
 				F6FC8C3C242A80F900B48FB6 /* AppDelegate.swift in Sources */,
 				F6FC8C46242A80F900B48FB6 /* Congress_Tracker_iOS.xcdatamodeld in Sources */,
+				F6FC8C57242A899D00B48FB6 /* CongressMember.swift in Sources */,
+				F6FC8C59242BDF5700B48FB6 /* MemberCell.swift in Sources */,
+				F6FC8C55242A857400B48FB6 /* CongressView.swift in Sources */,
+				F6FC8C5B242BE54B00B48FB6 /* ApiCall.swift in Sources */,
 				F6FC8C3E242A80F900B48FB6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
