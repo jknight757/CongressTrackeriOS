@@ -46,7 +46,7 @@
                                 <state key="normal" title="Don't have an account already? Sign up"/>
                                 <connections>
                                     <action selector="signUpBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pNm-Ex-ZD8"/>
-                                    <segue destination="TTC-Ze-FDF" kind="show" id="GOR-Ps-Kch"/>
+                                    <segue destination="TTC-Ze-FDF" kind="show" animates="NO" id="GOR-Ps-Kch"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yO9-42-LfQ">
@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="127"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View-->
         <scene sceneID="BuP-cz-5Y5">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="TTC-Ze-FDF" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="TTC-Ze-FDF" customClass="SignUpView" customModule="Congress_Tracker_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aXi-17-txc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +132,7 @@
                                 <state key="normal" title="Already have an account? Log In"/>
                                 <connections>
                                     <action selector="signUpBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JyY-Xa-Tjx"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="tLQ-KR-xYh"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="tLQ-KR-xYh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlv-yp-BCf">
@@ -230,13 +230,13 @@
         <!--Congress View-->
         <scene sceneID="ONp-dU-tJE">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="gfy-2f-2Wn" customClass="CongressView" customModule="Congress_Tracker_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overFullScreen" id="gfy-2f-2Wn" customClass="CongressView" customModule="Congress_Tracker_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1VC-96-6qI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s43-ZC-hZ6">
-                                <rect key="frame" x="20" y="143.5" width="374" height="708.5"/>
+                                <rect key="frame" x="20" y="171" width="374" height="681"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="94" id="K3v-Nc-ZKs" customClass="MemberCell" customModule="Congress_Tracker_iOS" customModuleProvider="target">
@@ -290,33 +290,79 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sJ-BV-kIi" userLabel="headerView">
-                                <rect key="frame" x="0.0" y="44" width="414" height="89.5"/>
-                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="49" width="414" height="112"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fv8-ef-KAg">
+                                        <rect key="frame" x="20" y="20" width="290.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kX-Gv-7NT">
+                                        <rect key="frame" x="320.5" y="20" width="73.5" height="32"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" image="magnifyingglass" catalog="system"/>
+                                    </button>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sEb-Z5-3Px">
+                                        <rect key="frame" x="20" y="62" width="166" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="3kX-Gv-7NT" firstAttribute="top" secondItem="0sJ-BV-kIi" secondAttribute="top" constant="20" id="7FU-hh-qye"/>
+                                    <constraint firstItem="fv8-ef-KAg" firstAttribute="leading" secondItem="0sJ-BV-kIi" secondAttribute="leading" constant="20" id="JhK-Rv-SQG"/>
+                                    <constraint firstItem="3kX-Gv-7NT" firstAttribute="leading" secondItem="fv8-ef-KAg" secondAttribute="trailing" constant="10" id="dQR-yO-PtF"/>
+                                    <constraint firstItem="fv8-ef-KAg" firstAttribute="trailing" secondItem="0sJ-BV-kIi" secondAttribute="centerX" multiplier="1.5" id="iiS-Lb-D6g"/>
+                                    <constraint firstAttribute="trailing" secondItem="3kX-Gv-7NT" secondAttribute="trailing" constant="20" id="lUE-Aj-mTl"/>
+                                    <constraint firstItem="fv8-ef-KAg" firstAttribute="top" secondItem="0sJ-BV-kIi" secondAttribute="top" constant="20" id="xgz-I1-DkI"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="s43-ZC-hZ6" firstAttribute="leading" secondItem="7jv-0X-d1q" secondAttribute="leading" constant="20" id="3Yf-RC-bXK"/>
                             <constraint firstItem="7jv-0X-d1q" firstAttribute="trailing" secondItem="s43-ZC-hZ6" secondAttribute="trailing" constant="20" id="87Q-y6-ISf"/>
-                            <constraint firstItem="0sJ-BV-kIi" firstAttribute="top" secondItem="7jv-0X-d1q" secondAttribute="top" id="EWP-V0-nRR"/>
+                            <constraint firstItem="0sJ-BV-kIi" firstAttribute="top" secondItem="7jv-0X-d1q" secondAttribute="top" constant="5" id="EWP-V0-nRR"/>
                             <constraint firstItem="s43-ZC-hZ6" firstAttribute="top" secondItem="0sJ-BV-kIi" secondAttribute="bottom" constant="10" id="I9R-pU-fSd"/>
                             <constraint firstItem="7jv-0X-d1q" firstAttribute="bottom" secondItem="s43-ZC-hZ6" secondAttribute="bottom" constant="10" id="ajc-Xa-796"/>
                             <constraint firstItem="7jv-0X-d1q" firstAttribute="trailing" secondItem="0sJ-BV-kIi" secondAttribute="trailing" id="bLE-1p-Fo7"/>
-                            <constraint firstItem="0sJ-BV-kIi" firstAttribute="height" secondItem="1VC-96-6qI" secondAttribute="height" multiplier="0.1" id="lyD-Md-FqM"/>
+                            <constraint firstItem="0sJ-BV-kIi" firstAttribute="height" secondItem="1VC-96-6qI" secondAttribute="height" multiplier="0.125" id="lyD-Md-FqM"/>
                             <constraint firstItem="0sJ-BV-kIi" firstAttribute="leading" secondItem="7jv-0X-d1q" secondAttribute="leading" id="xLo-Zl-s4Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7jv-0X-d1q"/>
                     </view>
                     <navigationItem key="navigationItem" id="xMs-to-WyH"/>
                     <connections>
+                        <outlet property="chamberPickerView" destination="sEb-Z5-3Px" id="uzk-3s-yqJ"/>
                         <outlet property="memberTableView" destination="s43-ZC-hZ6" id="Ibd-7S-B9e"/>
+                        <segue destination="0Mg-6R-TwI" kind="show" identifier="MemberDetailSegue" id="Y2z-iE-ldg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKb-H8-LRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2305.7971014492755" y="-170.08928571428569"/>
         </scene>
+        <!--Member Detail View-->
+        <scene sceneID="zB0-jD-dPL">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="0Mg-6R-TwI" customClass="MemberDetailView" customModule="Congress_Tracker_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ug1-ed-UKQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="INP-24-COA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="g2W-CE-Ms3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="un1-AR-XAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3119" y="-173"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Oo6-L1-i0z"/>
     </inferredMetricsTieBreakers>
