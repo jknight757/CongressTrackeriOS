@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol TableViewProtocol{
     func didReceiveData(result: [memberDetail]?, senate: Bool)
@@ -14,10 +15,14 @@ protocol TableViewProtocol{
 protocol SingleMemberProtocol{
     func didReceiveMemeberData(result: SingleMemberDetail)
 }
+protocol MemberImageProtocol{
+    func didReceiveImage(result: UIImage)
+}
 
 class ApiCaller{
     var tableViewDelegate: TableViewProtocol?
     var cellClickDelegate: SingleMemberProtocol?
+    var imageViewDelegate: MemberImageProtocol?
     var congressMembers: [memberDetail] = []
     var senateMembers: [memberDetail] = []
     var houseMembers: [memberDetail] = []
@@ -59,6 +64,32 @@ class ApiCaller{
          
         }
         
+    }
+    
+    func requestMemberImage(id: String){
+
+        let url = URL(string:"https://theunitedstates.io/images/congress/225x275/" + id + ".jpg")!
+        
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            self.imageViewDelegate?.didReceiveImage(result: UIImage(data: data)!)
+              
+           }
+
+//           do{
+//               memberImage = BitmapFactory.decodeStream((InputStream)new URL(url).getContent());
+//           }catch (MalformedURLException e){
+//               e.printStackTrace();
+//           }catch (IOException e){
+//               e.printStackTrace();
+//           }
+
+       }
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
     

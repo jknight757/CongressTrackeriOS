@@ -24,6 +24,7 @@ class CongressView: ViewController, UITableViewDelegate, UITableViewDataSource, 
     var chamberFilter = ["Chamber", "Senate", "House"]
     var currentFilter = "Chamber"
     var selectMemUri = "Error"
+    var loggedIn = false
     
     override func viewDidLoad() {
            super.viewDidLoad()

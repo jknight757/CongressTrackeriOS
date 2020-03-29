@@ -10,6 +10,7 @@
 		C231D60B494F4D37485D65B5 /* Pods_Congress_Tracker_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4B3A71EA4DD70791BADA68 /* Pods_Congress_Tracker_iOS.framework */; };
 		F6D7D584242E7E2800D335A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6D7D583242E7E2800D335A9 /* GoogleService-Info.plist */; };
 		F6D7D58A242E88E500D335A9 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D7D589242E88E500D335A9 /* SignUpView.swift */; };
+		F6D7D58C242FCEE600D335A9 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D7D58B242FCEE600D335A9 /* State.swift */; };
 		F6FC8C3C242A80F900B48FB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FC8C3B242A80F900B48FB6 /* AppDelegate.swift */; };
 		F6FC8C3E242A80F900B48FB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FC8C3D242A80F900B48FB6 /* SceneDelegate.swift */; };
 		F6FC8C40242A80F900B48FB6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FC8C3F242A80F900B48FB6 /* LoginView.swift */; };
@@ -30,6 +31,7 @@
 		EE4B3A71EA4DD70791BADA68 /* Pods_Congress_Tracker_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Congress_Tracker_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D7D583242E7E2800D335A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F6D7D589242E88E500D335A9 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		F6D7D58B242FCEE600D335A9 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		F6FC8C38242A80F900B48FB6 /* Congress Tracker iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Congress Tracker iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FC8C3B242A80F900B48FB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6FC8C3D242A80F900B48FB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FC8C56242A899D00B48FB6 /* CongressMember.swift */,
+				F6D7D58B242FCEE600D335A9 /* State.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				F6FC8C40242A80F900B48FB6 /* LoginView.swift in Sources */,
 				F6FC8C3C242A80F900B48FB6 /* AppDelegate.swift in Sources */,
 				F6FC8C46242A80F900B48FB6 /* Congress_Tracker_iOS.xcdatamodeld in Sources */,
+				F6D7D58C242FCEE600D335A9 /* State.swift in Sources */,
 				F6FC8C57242A899D00B48FB6 /* CongressMember.swift in Sources */,
 				F6FC8C59242BDF5700B48FB6 /* MemberCell.swift in Sources */,
 				F6FC8C55242A857400B48FB6 /* CongressView.swift in Sources */,

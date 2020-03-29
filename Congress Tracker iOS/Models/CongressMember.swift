@@ -29,10 +29,10 @@ struct memberDetail: Codable{
     
 }
 struct SingleMemberDetail: Codable{
+    var id: String
     var first_name: String
     var last_name: String
     var current_party: String?
-    var state: String?
     var roles: [memberTerm]?
     
 }
