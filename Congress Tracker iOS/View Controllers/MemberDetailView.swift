@@ -43,7 +43,7 @@ class MemberDetailView: UIViewController, SingleMemberProtocol, MemberImageProto
         DispatchQueue.main.async() {
         
             var name = self.selectMember!.first_name
-            name += ", " + self.selectMember!.last_name
+            name += " " + self.selectMember!.last_name
             
             var party = self.selectMember!.roles![0].chamber!
             if(self.selectMember!.current_party! == "R"){
@@ -87,6 +87,11 @@ class MemberDetailView: UIViewController, SingleMemberProtocol, MemberImageProto
         }
     }
        
-      
+    @IBAction func backBtnClick(_ sender: Any) {
+        performSegue(withIdentifier: "backSegue", sender: nil)
+    }
+    
+    
+    
     
 }

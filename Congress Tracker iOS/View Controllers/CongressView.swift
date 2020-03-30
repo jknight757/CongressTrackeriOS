@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
 
 
 class CongressView: ViewController, UITableViewDelegate, UITableViewDataSource, TableViewProtocol, UIPickerViewDelegate, UIPickerViewDataSource{
@@ -149,7 +150,11 @@ class CongressView: ViewController, UITableViewDelegate, UITableViewDataSource, 
     }
     
 
+    @IBAction func signoutClicked(_ sender: Any) {
     
-    
-    
+        try! Auth.auth().signOut()
+        performSegue(withIdentifier: "signOutSegue" , sender: nil)
+        
+    }
+
 }
